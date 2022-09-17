@@ -1,0 +1,16 @@
+.NavBar a.active {
+    text-decoration: underline
+}
+
+.NavBar a {
+    color: black
+}
+
+.NavBar a:hover {
+    color: rgb(132, 46, 30);
+}
+
+button {
+    background: none;
+    border: none
+}
