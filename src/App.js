@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navigation from "./Navigation";
 import RoutesList from './RoutesList';
 import Loading from './Loading';
+import './App.css';
 
 const GLOBAL_TOKEN = "token";
 
@@ -71,23 +72,25 @@ function App() {
     localStorage.removeItem(GLOBAL_TOKEN);
   }
   /** Handles updating token outside of app.js */
-  async function updateToken(tokenData){
-    setToken(tokenData)
-    localStorage.setItem(GLOBAL_TOKEN, tokenData)
+  async function updateToken(tokenData) {
+    setToken(tokenData);
+    localStorage.setItem(GLOBAL_TOKEN, tokenData);
 
   }
 
   return (
-    <userContext.Provider value={{ currentUser, setCurrentUser }}>
-      <div className="App" style={{backgroundImage:`url(friends.jpg)`, height:"100vh"}}>
-        <BrowserRouter>
-          <Navigation logout={logout} />
-          <div className="container">
-            <RoutesList login={login} updateToken={updateToken} />
-          </div>
-        </BrowserRouter>
-      </div>
-    </userContext.Provider>
+    <div className="App">
+      <userContext.Provider value={{ currentUser, setCurrentUser }}>
+        <div>
+          <BrowserRouter>
+            <Navigation logout={logout} />
+            <div className="container">
+              <RoutesList login={login} updateToken={updateToken} />
+            </div>
+          </BrowserRouter>
+        </div>
+      </userContext.Provider>
+    </div>
 
   );
 }
