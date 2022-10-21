@@ -79,7 +79,7 @@ function App() {
 
   return (
     <userContext.Provider value={{ currentUser, setCurrentUser }}>
-      <div className="App" style={{backgroundImage:`url(ogbg.jpg)`, height:"100vh"}}>
+      <div className="App" style={{backgroundImage:`url(friends.jpg)`, height:"100vh"}}>
         <BrowserRouter>
           <Navigation logout={logout} />
           <div className="container">
