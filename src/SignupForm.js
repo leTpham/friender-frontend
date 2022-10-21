@@ -62,7 +62,9 @@ function SignupForm({ updateToken }) {
     try {
       const response = await axios({
         method: "post",
-        url: "http://localhost:5001/signup",
+        url:  process.env.REACT_APP_BASE_URL ?
+        `${process.env.REACT_APP_BASE_URL}/signup` :
+        "http://localhost:5001/signup",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
