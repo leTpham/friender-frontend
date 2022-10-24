@@ -2,27 +2,36 @@
 .details{
 
     background-color: rgba(3, 8, 9, 0.33);
-    color: white;
+    color: rgba(216, 210, 210, 0.814);
 }
 
+.details:hover{
+    color: rgba(255, 255, 255, 0.814);
+}
 
 .cardTitle{
-    color: white;
+    color: rgba(241, 228, 214, 0.685);
     text-align: center;
-    padding: 2rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-style:italic;
 }
 
-.subtitle{
-    color: white;
+.card-subtitle{
+    color: rgba(229, 226, 222, 0.959);
     text-align: center;
     padding-bottom: 10px;
+    font-size: 3rem;
+}
 
+.card-subtitle:hover{
+    color: rgb(251, 249, 247);
 }
 
 .cardFrame{
     max-width: 100vh;
     max-height: 100vh;
-    margin-top: 2rem;
+    margin: 0.5rem;
     padding: 2rem;
     align-items: center;
     background-color: rgba(36, 28, 9, 0.33);
@@ -31,15 +40,15 @@
 
 .image{
     max-height: 50vh;
-    max-width: auto;
+    width: auto;
     margin-bottom: 1rem;
 }
 
-button{
+/* button{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
     width:200px;
-}
+} */

@@ -4,11 +4,10 @@ import { Container, Row, Col } from "reactstrap";
 
 function UserCardList({ users }) {
   return (
-
     <Container>
       <Row>
       {users.map(user =>
-        <Col ><UserCard key={user.username} user={user}  /></Col>)}
+        <Col key={user.username}><UserCard user={user} /></Col>)}
         </Row>
     </Container>
   );

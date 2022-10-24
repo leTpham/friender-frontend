@@ -58,8 +58,8 @@ function UserDetail({ cantfind }) {
         <div className='overflow-hidden'>
           <Card className="cardFrame">
             <CardBody >
-              <CardTitle className='cardTitle' tag='h1'>
-                {user.username}
+              <CardTitle className='cardTitle'>
+                @{user.username}
               </CardTitle>
               <CardSubtitle className='subtitle'>
                 {user.fullName}

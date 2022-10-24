@@ -1,0 +1,18 @@
+/* credit to https://stackoverflow.com/questions/33888214/css-animation-to-extend-button-text-on-hover */
+button span {
+    max-width: 0;
+    -webkit-transition: max-width 1s;
+    transition: max-width 1s;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+button:hover span {
+    max-width: 7rem;
+}
+
+.swipers{
+    margin-top: 1rem;
+}

@@ -84,7 +84,7 @@ function App() {
         <div>
           <BrowserRouter>
             <Navigation logout={logout} />
-            <div className="container">
+            <div>
               <RoutesList login={login} updateToken={updateToken} />
             </div>
           </BrowserRouter>
