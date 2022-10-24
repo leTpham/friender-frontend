@@ -41,7 +41,7 @@ function LoginForm({ login }) {
   }
 
   return (
-    <div className="loginPage">
+    <div className="loginPage container mt-5">
       <h3 className="mb-4">Log In</h3>
       <form className="LoginForm" onSubmit={handleSubmit}>
 

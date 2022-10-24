@@ -88,7 +88,7 @@ function SignupForm({ updateToken }) {
 
 
   return (
-    <div className="signupPage">
+    <div className="signupPage container mt-5">
       <h3 className="mb-4">Sign Up</h3>
       <form className="SignUpForm" onSubmit={handleSubmit}>
 
