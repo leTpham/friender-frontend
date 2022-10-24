@@ -20,16 +20,27 @@ function Matches() {
 
   if (!users) return <Loading />;
 
-  return (<>
+  return (
+  <div className="container d-flex justify-content-center">
   {users.length > 0
   ?
   users.map(u => (
-    <Card className="oneCard">
+    <Card
+    className="oneCard"
+    style={{
+      width: '80vh',
+      height: '80vh',
+      margin: 'auto',
+      padding: '0.5rem',
+      alignItems: "center",
+      backgroundColor: 'rgba(36, 28, 9, 0.33)',
+
+    }}>
     <CardBody>
-      <CardTitle className='cardTitle' tag="h5">
+      <CardTitle className='cardTitle' tag="h1">
         {u.username}
-      </CardTitle>
-      <CardSubtitle>
+     </CardTitle>
+      <CardSubtitle className='subtitle'>
         {u.fullName}
       </CardSubtitle>
       <div  key={u.username}>
@@ -39,14 +50,15 @@ function Matches() {
       </div>
 
         <CardText className='cardText'>
-          <h4>Hobbies: {u.hobbies}sssssssss</h4>
+          <h4>Hobbies: {u.hobbies}</h4>
           <h4>interests: {u.interests}</h4>
         </CardText>
       </CardBody>
     </Card>
     ))
     :
-    <p> No matches yet!</p> }</>
+    <p> No matches yet!</p> }
+    </div>
   );
 
 }

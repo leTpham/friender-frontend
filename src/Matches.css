@@ -39,3 +39,15 @@
     height: 10rem;
     width: auto;
 }
+
+.cardTitle{
+  color: white;
+  text-align: center;
+}
+
+.subtitle{
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+
+}

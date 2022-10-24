@@ -52,15 +52,15 @@ function UserDetail({cantfind}){
   if (!user && errors.length < 1) return (<Loading />);
 
   return(
-    <div className="container">
+    <div className="container d-flex justify-content-center">
       {errors.length > 0
       ?
       <Navigate to={cantfind} />
       :
       <>
       <Card style={{
-          width: '80vh',
-          height: '80vh',
+          maxWidth: '100vh',
+          maxHeight: '100vh',
           margin: '1rem',
           padding: '0.5rem',
           alignItems: "center",
@@ -77,8 +77,9 @@ function UserDetail({cantfind}){
         {user.image && <img src={user.image}
         alt = {user.fullName}
         style={{
-          maxHeight: "50vh",
-          width: "auto",
+          maxHeight: "30vh",
+          maxWidth: "30vh",
+
         }}/>}
 
       <CardText className='cardText'
