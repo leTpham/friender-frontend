@@ -28,15 +28,7 @@ function Matches() {
     <Card
     key={u.username}
     className="oneCard"
-    style={{
-      width: '80vh',
-      height: '80vh',
-      margin: 'auto',
-      padding: '0.5rem',
-      alignItems: "center",
-      backgroundColor: 'rgba(36, 28, 9, 0.33)',
-
-    }}>
+    >
     <CardBody>
       <CardTitle className='cardTitle' tag="h1">
         {u.username}
@@ -58,7 +50,7 @@ function Matches() {
     </Card>
     ))
     :
-    <p> No matches yet!</p> }
+    <div className="nomatch"> You don't have any matches yet!</div> }
     </div>
   );
 

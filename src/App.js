@@ -84,6 +84,7 @@ function App() {
         <div>
           <BrowserRouter>
             <Navigation logout={logout} />
+            {/* //TODO: container or container-fluid? */}
             <div>
               <RoutesList login={login} updateToken={updateToken} />
             </div>

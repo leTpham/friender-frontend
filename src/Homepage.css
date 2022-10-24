@@ -1,7 +1,7 @@
 .homepage{
-    text-shadow: 2px 2px 2px rgb(40, 38, 38);
-    color: white;
-    height: 50px;
+    text-shadow: 0.5px 0.5px 0.5px rgba(42, 42, 104, 0.687);
+    color: rgb(236, 236, 239);
+    height: 0vh;
     left: 50%;
     display: flex;
     flex-direction: column;
@@ -10,9 +10,22 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 50vh;
 }
 
 p{
     font-size:large;
+}
+
+.lgsu{
+    opacity: 80%;
+    filter: saturate(70%);
+    margin: 1rem;
+
+}
+
+.lgsu:hover{
+    opacity: 100%;
+    filter: saturate(1);
+
 }

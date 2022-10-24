@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
+import { Button } from 'reactstrap';
 import userContext from "./userContext";
-import "./Homepage.css"
+import "./Homepage.css";
 
 /** Displays main homepage for Friender app
  *
@@ -22,9 +23,15 @@ function Homepage() {
       {currentUser &&
         <h2>Welcome Back, {currentUser.fullName}!</h2>}
       {!currentUser &&
-        <div className="homepage-btn">
-          <a href="/login" className="btn btn-primary me-3">Log In</a>
-          <a href="/signup" className="btn btn-primary">Sign Up</a>
+        <div>
+          <Button
+            href="/login"
+            className="lgsu"
+            color="info"> Log In</Button>
+          <Button
+            href="/signup"
+            className="lgsu"
+            color="warning"> Sign up</Button>
         </div>}
     </div>
   );
