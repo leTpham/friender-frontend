@@ -3,7 +3,6 @@ import { Container, Row, Col } from "reactstrap";
 
 
 function UserCardList({ users }) {
-  console.log("INSIDE USER CARD  LIST")
   return (
 
     <Container>

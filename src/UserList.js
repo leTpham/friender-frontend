@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import FrienderApi from "./_api";
 import Loading from "./Loading";
 
-import UserCardList from "./UserCardList"
+import UserCardList from "./UserCardList";
 
 function UserList() {
   const [users, setUsers] = useState(null);
@@ -12,19 +12,18 @@ function UserList() {
       let users = await FrienderApi.getAllUsers();
       setUsers(users);
     }
-    listUsers()
+    listUsers();
   }, []);
 
   if (!users) return <Loading />;
 
 
 
-  console.log("INSIDE USER LIST")
   return (
 
     <div>
 
-      <UserCardList users={users}/>
+      <UserCardList users={users} />
 
     </div>
 
@@ -32,4 +31,4 @@ function UserList() {
 
 
 }
-export default UserList
+export default UserList;

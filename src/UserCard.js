@@ -3,9 +3,6 @@ import {Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 function UserCard({ user }) {
   const { username, fullName, hobbies, interests, zipcode, radius, image } = user;
-  console.log("INSIDE USER CARD");
-
-  console.log(username, fullName, hobbies, interests, zipcode, radius, image);
 
   return (
     <Link to={`/users/${username}`} style={{textDecoration:'none', color:'black'}}>

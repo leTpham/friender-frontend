@@ -21,11 +21,12 @@ function Matches() {
   if (!users) return <Loading />;
 
   return (
-  <div className="container d-flex justify-content-center">
+  <div className="d-flex justify-content-center">
   {users.length > 0
   ?
   users.map(u => (
     <Card
+    key={u.username}
     className="oneCard"
     style={{
       width: '80vh',
@@ -50,8 +51,8 @@ function Matches() {
       </div>
 
         <CardText className='cardText'>
-          <h4>Hobbies: {u.hobbies}</h4>
-          <h4>interests: {u.interests}</h4>
+          Hobbies: {u.hobbies}
+          interests: {u.interests}
         </CardText>
       </CardBody>
     </Card>

@@ -33,7 +33,6 @@ function Navigation({ logout }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  console.log("current user in nav", currentUser);
   function loggedIn() {
     return (
       <>

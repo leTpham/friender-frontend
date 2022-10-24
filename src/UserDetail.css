@@ -1,38 +1,15 @@
-.container{
-     display: block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    width: 70%;
-}
-.oneCard{
-    background-color: rgba(36, 28, 9, 0.33);
-    border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    height:300px;
-
-}
-
-img{
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
 .details{
 
-    background-color: rgba(36, 28, 9, 0.33);
+    background-color: rgba(3, 8, 9, 0.33);
+    color: white;
 }
+
 
 .cardTitle{
     color: white;
     text-align: center;
+    padding: 2rem;
 }
 
 .subtitle{
@@ -40,6 +17,22 @@ img{
     text-align: center;
     padding-bottom: 10px;
 
+}
+
+.cardFrame{
+    max-width: 100vh;
+    max-height: 100vh;
+    margin-top: 2rem;
+    padding: 2rem;
+    align-items: center;
+    background-color: rgba(36, 28, 9, 0.33);
+    overflow: hidden;
+}
+
+.image{
+    max-height: 50vh;
+    max-width: auto;
+    margin-bottom: 1rem;
 }
 
 button{

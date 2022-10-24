@@ -21,7 +21,7 @@ function LoginForm({ login }) {
   const [isBadLogin, setIsBadLogin] = useState(true);
 
   const navigate = useNavigate();
-  
+
   /** Update form input. */
   function handleChange(evt) {
     const { name, value } = evt.target;
@@ -36,7 +36,6 @@ function LoginForm({ login }) {
     evt.preventDefault();
     await login(formData);
     setFormData(initial);
-    console.log("CURR USER:", currentUser);
     if (currentUser) navigate("/users");
     if (!currentUser) setIsBadLogin(false);
   }
