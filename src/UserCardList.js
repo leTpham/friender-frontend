@@ -1,16 +1,22 @@
 import UserCard from "./UserCard"
 import { Container, Row, Col } from "reactstrap";
-
+import "./UserCardList.css";
 
 function UserCardList({ users }) {
   return (
-    <Container>
+    <Container fluid>
       <Row>
       {users.map(user =>
-        <Col key={user.username}><UserCard user={user} /></Col>)}
+        <Col
+        className="user-card"
+        key={user.username}
+        >
+          <UserCard user={user} />
+          </Col>
+          )}
         </Row>
     </Container>
   );
 }
 
-export default UserCardList; 
+export default UserCardList;
