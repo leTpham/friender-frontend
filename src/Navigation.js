@@ -46,11 +46,9 @@ function Navigation({ logout }) {
             activeclassname="active"
             tag={RRNavLink}>Matches</NavLink>
         </NavItem>
-        <NavItem>
-          <button
+        <NavItem
             className="nav-link"
             onClick={logout}>Log out, {currentUser.fullName}
-          </button>
         </NavItem>
 
       </>
@@ -76,7 +74,7 @@ function Navigation({ logout }) {
 
   return (
     <div>
-      <Navbar color="white" light expand="md">
+      <Navbar color="white" light expand="lg">
         <NavbarBrand href="/" style={{ color: "orange" }}>Friender</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -92,3 +90,12 @@ function Navigation({ logout }) {
 
 
 export default Navigation;
+
+// padding: 0.25rem 0.75rem;
+// font-size: 1.25rem;
+// line-height: 1;
+// background-color: transparent;
+// border: 1px solid transparent;
+// border-radius: 0.25rem;
+// transition: box-shadow .15s ease-in-out;
+// width: 100px;

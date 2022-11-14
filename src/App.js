@@ -81,15 +81,12 @@ function App() {
   return (
     <div className="App">
       <userContext.Provider value={{ currentUser, setCurrentUser }}>
-        <div>
+
           <BrowserRouter>
             <Navigation logout={logout} />
             {/* //TODO: container or container-fluid? */}
-            <div>
               <RoutesList login={login} updateToken={updateToken} />
-            </div>
           </BrowserRouter>
-        </div>
       </userContext.Provider>
     </div>
 
