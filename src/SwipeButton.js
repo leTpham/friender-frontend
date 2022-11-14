@@ -5,7 +5,7 @@ import './SwipeButton.css';
 /** Handles like/dislike of a user's profile */
 function SwipeButton({ like, dislike }) {
   return (
-    <div class="d-flex justify-content-between swipers">
+    <div className="d-flex justify-content-between swipers">
       <Button outline color="danger" onClick={dislike}>
         <TbFriendsOff />
         <span> &nbsp;No thanks!</span>

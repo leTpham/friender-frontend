@@ -25,7 +25,7 @@ function Matches() {
       {users.length > 0
         ?
         users.map(user => (
-          <div className='overflow-hidden'>
+          <div className='overflow-hidden' key="user.username">
             <Card className="cardFrame">
               <CardBody >
                 <CardTitle className='cardTitle'>
