@@ -50,7 +50,7 @@ function UserDetail({ cantfind }) {
   if (!user && errors.length < 1) return (<Loading />);
 
   return (
-    <div className="d-flex justify-content-center ">
+    <div className="d-flex justify-content-center">
       {errors.length > 0
         ?
         <Navigate to={cantfind} />
