@@ -1,6 +1,8 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import "./SignupForm.css"
 
 /** Form for adding.
  *
@@ -62,9 +64,9 @@ function SignupForm({ updateToken }) {
     try {
       const response = await axios({
         method: "post",
-        url:  process.env.REACT_APP_BASE_URL ?
-        `${process.env.REACT_APP_BASE_URL}/signup` :
-        "http://localhost:5001/signup",
+        url: process.env.REACT_APP_BASE_URL ?
+          `${process.env.REACT_APP_BASE_URL}/signup` :
+          "http://localhost:5001/signup",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -88,13 +90,10 @@ function SignupForm({ updateToken }) {
 
 
   return (
-    <div className="signupPage container mt-5">
-      <h3 className="mb-4">Sign Up</h3>
-      <form className="SignUpForm" onSubmit={handleSubmit}>
-
-        <div className="mb-3">
-          <label className="mb-2 label">Username</label>
-          <input
+    <div className="signupPage">
+      <Form className="signupForm">
+        <FormGroup floating>
+          <Input
             id="username"
             name="username"
             className="form-control"
@@ -103,10 +102,12 @@ function SignupForm({ updateToken }) {
             value={fData.username}
             aria-label="Username"
           />
-        </div>
-        <div className="mb-3">
-          <label className="mb-2 label">Password</label>
-          <input
+          <Label for="username">
+            Username
+          </Label>
+        </FormGroup>
+        <FormGroup floating>
+          <Input
             id="password"
             name="password"
             className="form-control"
@@ -116,10 +117,13 @@ function SignupForm({ updateToken }) {
             aria-label="Password"
             type="password"
           />
-        </div>
-        <div className="mb-3">
-          <label className="mb-2 label">Full Name</label>
-          <input
+          <Label for="password">
+            Password
+          </Label>
+        </FormGroup>
+
+        <FormGroup floating>
+          <Input
             id="fullName"
             name="fullName"
             className="form-control"
@@ -128,10 +132,11 @@ function SignupForm({ updateToken }) {
             value={fData.fullName}
             aria-label="Full Name"
           />
-        </div>
-        <div className="mb-3">
-          <label className="mb-2 label">Hobbies</label>
-          <input
+          <Label>Full Name</Label>
+        </FormGroup>
+
+        <FormGroup floating>
+          <Input
             id="hobbies"
             name="hobbies"
             className="form-control"
@@ -140,10 +145,11 @@ function SignupForm({ updateToken }) {
             value={fData.hobbies}
             aria-label="Hobbies"
           />
-        </div>
-        <div className="mb-3">
-          <label className="mb-2 label">Interests</label>
-          <input
+          <Label for="hobbies">Hobbies</Label>
+        </FormGroup>
+
+        <FormGroup floating>
+          <Input
             id="interests"
             name="interests"
             className="form-control"
@@ -152,10 +158,11 @@ function SignupForm({ updateToken }) {
             value={fData.interests}
             aria-label="Interests"
           />
-        </div>
-        <div className="mb-3">
-          <label className="mb-2 label">Zipcode</label>
-          <input
+          <Label for="interests">Interests</Label>
+        </FormGroup>
+
+        <FormGroup floating>
+          <Input
             id="zipcode"
             name="zipcode"
             className="form-control"
@@ -164,11 +171,11 @@ function SignupForm({ updateToken }) {
             value={fData.zipcode}
             aria-label="Zipcode"
           />
-        </div>
+          <Label for="zipcode"> Zipcode</Label>
+        </FormGroup>
 
-        <div className="mb-3">
-          <label className="mb-2 label">Radius</label>
-          <input
+        <FormGroup floating>
+          <Input
             id="radius"
             name="radius"
             className="form-control"
@@ -177,11 +184,11 @@ function SignupForm({ updateToken }) {
             value={fData.radius}
             aria-label="Radius"
           />
-        </div>
+          <Label for="radius">Radius to connect</Label>
+        </FormGroup>
 
-        <div className="mb-3">
-          <label className="mb-2 label">Image</label>
-          <input
+        <FormGroup floating>
+          <Input
             id="image"
             name="image"
             type="file"
@@ -190,20 +197,15 @@ function SignupForm({ updateToken }) {
             placeholder="Enter Image"
             aria-label="Image"
           />
-        </div>
-
+          <Label for="image">Image</Label>
+        </FormGroup>
         {isBadSignup &&
           <div className="alert alert-danger" role="alert">
             All fields must be filled out
           </div>
         }
-        <div>
-          <button className="btn btn-primary">
-            Submit
-          </button>
-        </div>
-
-      </form>
+        <Button onClick={handleSubmit}>Sign up</Button>
+      </Form>
     </div>
   );
 }
