@@ -1,0 +1,16 @@
+.loginPage {
+    height: 100vh;
+    display: flex;
+    align-items: center;;
+    justify-content: center;
+}
+
+
+.loginForm {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin:2rem 2rem;
+    padding: 1rem 1rem;
+    align-items: center;
+}
